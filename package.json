@@ -4,11 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "node-sass "
+    "test": "node-sass sass/tyson.scss build/tyson.css"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "node-sass": "^4.7.2"
+    "node-sass": "^4.7.2",
+    "reset-css": "^2.2.1"
   }
 }
