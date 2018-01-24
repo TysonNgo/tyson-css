@@ -4,12 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "node-sass sass/tyson.scss build/tyson.css"
+    "start": "npm run build -- -w & npm run reload",
+    "build": "node-sass sass/tyson.scss build/tyson.css",
+    "reload": "reload -b"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "node-sass": "^4.7.2",
     "reset-css": "^2.2.1"
+  },
+  "devDependencies": {
+    "reload": "^2.2.2"
   }
 }
