@@ -4,14 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npm run build -- -w & npm run reload",
+    "start": "npm run open-files | npm run build -- -w | npm run reload",
     "build": "node-sass sass/tyson.scss build/tyson.css",
-    "reload": "reload -b"
+    "reload": "reload -b",
+    "open-files": "subl sass/tyson.scss index.html"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "node-sass": "^4.7.2",
+    "normalize.css": "^7.0.0",
     "reset-css": "^2.2.1"
   },
   "devDependencies": {

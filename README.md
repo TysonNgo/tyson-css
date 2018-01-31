@@ -1,7 +1,7 @@
 # Components to do
 
 * grid
-* preloader
+* <del>preloader</del>
 * buttons
 * nav
 * footer

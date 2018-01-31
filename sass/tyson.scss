@@ -1,1 +1,134 @@
-@import 'node_modules/reset-css/_reset';
+// maybe not going to reset
+// @import 'node_modules/reset-css/_reset';
+@import 'node_modules/normalize.css/normalize';
+
+// separate below into modules later
+
+// constants
+$mobile: 0;
+$tablet: 1;
+$desktop: 2;
+
+// /* PRELOADER */ //
+////////////////////////////////
+
+//////////////////////
+// preloader mixins //
+//////////////////////
+@mixin circle($radius) {
+	border-radius: 50%;
+	width: $radius;
+	height: $radius;
+}
+@mixin center-circle-overlay($outer-radius, $inner-radius){
+	position: absolute;
+	top: #{($outer-radius - $inner-radius) / 2};
+	left: #{($outer-radius - $inner-radius) / 2};
+}
+@mixin plate-background($color){
+	$inner1: lighten($color, 13%);
+	$inner2: darken($color, 9%);
+	$rim1: darken($color, 20%);
+	$rim2: darken($color, 30%);
+	$outer2: darken($color, 30%);
+	$outer1: darken($color, 16%);
+	background: radial-gradient(
+			$inner1 0%, $inner2 63%, // inner circle
+			$rim1 0%, $rim2 64%, // rim line 
+			$outer1 0%, $outer2 70%); // outer circle 
+}
+// device - mobile | tablet | desktop
+@mixin preloader($device){
+	$base-radius: 90px;
+
+	@if $device == $mobile{
+		// base-radius remains the same
+	} @else if $device == $tablet{
+		$base-radius: 125px;
+	} @else if $device == $desktop{
+		$base-radius: 175px;
+	}
+
+	$preloader-plate-outer-radius: $base-radius;
+	$preloader-plate-inner-radius: $preloader-plate-outer-radius / 2;
+	$preloader-end-cap-radius: $preloader-plate-outer-radius / 6;
+
+	.preloader-container{
+		white-space: nowrap;
+		.preloader:not(:first-child){
+			margin-left: -#{$preloader-plate-outer-radius / 1.63};
+		}
+	}
+
+	.preloader {
+		@include circle($preloader-plate-outer-radius);
+		display:inline-block;
+		position:relative;
+		animation: spin 1s infinite;
+	}
+	.preloader.kg25{
+			@include plate-background(red);
+	}
+	.preloader.kg20{
+			@include plate-background(#00a);
+	}
+	.preloader.kg15{
+			@include plate-background(#f0f000);
+	}
+	.preloader.kg10{
+			@include plate-background(#0e0);
+	}
+
+	.preloader::before{
+		@include circle($preloader-plate-inner-radius);
+		@include center-circle-overlay(
+				$preloader-plate-outer-radius,
+				$preloader-plate-inner-radius
+			);
+		content: '';
+		background-color: #888;
+		background-image:
+			linear-gradient(60deg, transparent 48%, rgba(153,153,153,0.5) 50%,
+				rgba(153,153,153,0.5) 50%, transparent 52%),
+			linear-gradient(-60deg, transparent 48%, rgba(153,153,153,0.5) 50%,
+				rgba(153,153,153,0.5) 50%, transparent 52%),
+			linear-gradient(0deg, transparent 0%, #fff 50%,
+				#fff 50%, transparent 100%),
+			linear-gradient(40deg, transparent 40%, #fff 50%,
+				#fff 50%, transparent 60%),
+			linear-gradient(-40deg, transparent 40%, #fff 50%,
+				#fff 50%, transparent 60%)
+	}
+	.preloader::after{
+		@include circle($preloader-end-cap-radius);
+		@include center-circle-overlay(
+				$preloader-plate-outer-radius,
+				$preloader-end-cap-radius
+			);
+		content: '';
+		background: radial-gradient(
+			#aaa 0%, #888 40%,
+			#555 0%, black 58%,
+			#888 0%, black 80%);
+	}
+}
+
+////////////////////////////////////////////////////////////////////////////////////
+
+///* animations */
+// spinning animation used for:
+// * preloader 
+@keyframes spin {
+	from { transform: rotate(0deg); }
+	to { transform: rotate(360deg); }
+}
+
+@media screen and (min-width: 320px){
+	@include preloader($mobile);
+}
+@media screen and (min-width: 768px){
+	@include preloader($tablet);
+}
+@media screen and (min-width: 1024px){
+	@include preloader($desktop);
+}
