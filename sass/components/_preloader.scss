@@ -1,0 +1,101 @@
+@import '_variables';
+@import '_genericMixins';
+@import '_animations.scss';
+
+// This preloader in appearance, resembles weightlifting bumper plates
+//---------------------------------------------------------------------------/
+
+
+// applied to the inner circle element
+//   given the radius of 2 circles, position the inner circle
+//   in the center of the outer circle
+@mixin center-circle-overlay($outer-radius, $inner-radius){
+	position: absolute;
+	top: #{($outer-radius - $inner-radius) / 2};
+	left: #{($outer-radius - $inner-radius) / 2};
+}
+
+@mixin preloader-color($color){
+	$inner1: lighten($color, 13%);
+	$inner2: darken($color, 9%);
+	$rim1: darken($color, 20%);
+	$rim2: darken($color, 30%);
+	$outer2: darken($color, 30%);
+	$outer1: darken($color, 16%);
+	background: $color;
+	background: radial-gradient(
+			$inner1 0%, $inner2 63%, // inner circle
+			$rim1 0%, $rim2 64%, // rim line 
+			$outer1 0%, $outer2 70%); // outer circle 
+}
+
+@mixin preloader($device){
+	$base-radius: 90px;
+
+	@if $device == $small{
+		// base-radius remains the same
+	} @else if $device == $medium{
+		$base-radius: 125px;
+	} @else if $device == $large{
+		$base-radius: 175px;
+	}
+
+	$preloader-plate-outer-radius: $base-radius;
+	$preloader-plate-inner-radius: $preloader-plate-outer-radius / 2;
+	$preloader-end-cap-radius: $preloader-plate-outer-radius / 6;
+
+	.preloader-container{
+		white-space: nowrap;
+		.preloader:not(:first-child){
+			margin-left: -#{$preloader-plate-outer-radius / 1.63};
+		}
+	}
+
+	// rubber part of bumper plate
+	.preloader {
+		@include circle($preloader-plate-outer-radius);
+		display:inline-block;
+		position:relative;
+		animation: spin 1s infinite;
+		&.kg25{ @include preloader-color(red); }
+		&.kg20{ @include preloader-color(#00a); } // blue
+		&.kg15{ @include preloader-color(#f0f000); } // yellow
+		&.kg10{ @include preloader-color(#0e0); } // green
+	}
+	
+	// metal inner disc of bumper plate
+	.preloader::before{
+		@include circle($preloader-plate-inner-radius);
+		@include center-circle-overlay(
+				$preloader-plate-outer-radius,
+				$preloader-plate-inner-radius
+			);
+		content: '';
+		background-color: #888;
+		background-image:
+			linear-gradient(60deg, transparent 48%, rgba(153,153,153,0.5) 50%,
+				rgba(153,153,153,0.5) 50%, transparent 52%),
+			linear-gradient(-60deg, transparent 48%, rgba(153,153,153,0.5) 50%,
+				rgba(153,153,153,0.5) 50%, transparent 52%),
+			linear-gradient(0deg, transparent 0%, #fff 50%,
+				#fff 50%, transparent 100%),
+			linear-gradient(40deg, transparent 40%, #fff 50%,
+				#fff 50%, transparent 60%),
+			linear-gradient(-40deg, transparent 40%, #fff 50%,
+				#fff 50%, transparent 60%)
+	}
+
+	// end-cap
+	.preloader::after{
+		@include circle($preloader-end-cap-radius);
+		@include center-circle-overlay(
+				$preloader-plate-outer-radius,
+				$preloader-end-cap-radius
+			);
+		content: '';
+		background: radial-gradient(
+			#aaa 0%, #888 40%,
+			#555 0%, black 58%,
+			#888 0%, black 80%);
+	}
+}

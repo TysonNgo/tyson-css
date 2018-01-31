@@ -407,14 +407,18 @@ template {
     display: inline-block;
     position: relative;
     animation: spin 1s infinite; }
-  .preloader.kg25 {
-    background: radial-gradient(#ff4242 0%, #d10000 63%, #990000 0%, #660000 64%, #ad0000 0%, #660000 70%); }
-  .preloader.kg20 {
-    background: radial-gradient(#0000ec 0%, #00007c 63%, #000044 0%, #000011 64%, #000058 0%, #000011 70%); }
-  .preloader.kg15 {
-    background: radial-gradient(#ffff33 0%, #c2c200 63%, #8a8a00 0%, #575700 64%, #9e9e00 0%, #575700 70%); }
-  .preloader.kg10 {
-    background: radial-gradient(#31ff31 0%, #00c000 63%, #008800 0%, #005500 64%, #009c00 0%, #005500 70%); }
+    .preloader.kg25 {
+      background: red;
+      background: radial-gradient(#ff4242 0%, #d10000 63%, #990000 0%, #660000 64%, #ad0000 0%, #660000 70%); }
+    .preloader.kg20 {
+      background: #00a;
+      background: radial-gradient(#0000ec 0%, #00007c 63%, #000044 0%, #000011 64%, #000058 0%, #000011 70%); }
+    .preloader.kg15 {
+      background: #f0f000;
+      background: radial-gradient(#ffff33 0%, #c2c200 63%, #8a8a00 0%, #575700 64%, #9e9e00 0%, #575700 70%); }
+    .preloader.kg10 {
+      background: #0e0;
+      background: radial-gradient(#31ff31 0%, #00c000 63%, #008800 0%, #005500 64%, #009c00 0%, #005500 70%); }
   .preloader::before {
     border-radius: 50%;
     width: 45px;
@@ -447,14 +451,18 @@ template {
     display: inline-block;
     position: relative;
     animation: spin 1s infinite; }
-  .preloader.kg25 {
-    background: radial-gradient(#ff4242 0%, #d10000 63%, #990000 0%, #660000 64%, #ad0000 0%, #660000 70%); }
-  .preloader.kg20 {
-    background: radial-gradient(#0000ec 0%, #00007c 63%, #000044 0%, #000011 64%, #000058 0%, #000011 70%); }
-  .preloader.kg15 {
-    background: radial-gradient(#ffff33 0%, #c2c200 63%, #8a8a00 0%, #575700 64%, #9e9e00 0%, #575700 70%); }
-  .preloader.kg10 {
-    background: radial-gradient(#31ff31 0%, #00c000 63%, #008800 0%, #005500 64%, #009c00 0%, #005500 70%); }
+    .preloader.kg25 {
+      background: red;
+      background: radial-gradient(#ff4242 0%, #d10000 63%, #990000 0%, #660000 64%, #ad0000 0%, #660000 70%); }
+    .preloader.kg20 {
+      background: #00a;
+      background: radial-gradient(#0000ec 0%, #00007c 63%, #000044 0%, #000011 64%, #000058 0%, #000011 70%); }
+    .preloader.kg15 {
+      background: #f0f000;
+      background: radial-gradient(#ffff33 0%, #c2c200 63%, #8a8a00 0%, #575700 64%, #9e9e00 0%, #575700 70%); }
+    .preloader.kg10 {
+      background: #0e0;
+      background: radial-gradient(#31ff31 0%, #00c000 63%, #008800 0%, #005500 64%, #009c00 0%, #005500 70%); }
   .preloader::before {
     border-radius: 50%;
     width: 62.5px;
@@ -487,14 +495,18 @@ template {
     display: inline-block;
     position: relative;
     animation: spin 1s infinite; }
-  .preloader.kg25 {
-    background: radial-gradient(#ff4242 0%, #d10000 63%, #990000 0%, #660000 64%, #ad0000 0%, #660000 70%); }
-  .preloader.kg20 {
-    background: radial-gradient(#0000ec 0%, #00007c 63%, #000044 0%, #000011 64%, #000058 0%, #000011 70%); }
-  .preloader.kg15 {
-    background: radial-gradient(#ffff33 0%, #c2c200 63%, #8a8a00 0%, #575700 64%, #9e9e00 0%, #575700 70%); }
-  .preloader.kg10 {
-    background: radial-gradient(#31ff31 0%, #00c000 63%, #008800 0%, #005500 64%, #009c00 0%, #005500 70%); }
+    .preloader.kg25 {
+      background: red;
+      background: radial-gradient(#ff4242 0%, #d10000 63%, #990000 0%, #660000 64%, #ad0000 0%, #660000 70%); }
+    .preloader.kg20 {
+      background: #00a;
+      background: radial-gradient(#0000ec 0%, #00007c 63%, #000044 0%, #000011 64%, #000058 0%, #000011 70%); }
+    .preloader.kg15 {
+      background: #f0f000;
+      background: radial-gradient(#ffff33 0%, #c2c200 63%, #8a8a00 0%, #575700 64%, #9e9e00 0%, #575700 70%); }
+    .preloader.kg10 {
+      background: #0e0;
+      background: radial-gradient(#31ff31 0%, #00c000 63%, #008800 0%, #005500 64%, #009c00 0%, #005500 70%); }
   .preloader::before {
     border-radius: 50%;
     width: 87.5px;
