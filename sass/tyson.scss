@@ -3,13 +3,4 @@
 @import 'node_modules/normalize.css/normalize';
 @import 'components/_preloader';
 @import 'components/_variables';
-
-@media screen and ($small){
-	@include preloader($small);
-}
-@media screen and ($medium){
-	@include preloader($medium);
-}
-@media screen and ($large){
-	@include preloader($large);
-}
+@import 'components/_grid';

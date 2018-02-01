@@ -1,6 +1,6 @@
 # Components to do
 
-* grid
+* <del>grid</del>
 * <del>preloader</del>
 * buttons
 * nav

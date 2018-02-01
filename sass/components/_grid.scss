@@ -1,0 +1,44 @@
+@import '_variables';
+
+// 12-column Grid Layout
+//---------------------------------------------------------------------------/
+
+@mixin column($num, $size){
+	// $size - s || m || l
+
+	.col-#{$num}-#{$size}{
+			width: #{($num / 12 * 100)+0%};
+	}
+}
+
+@mixin create-columns(){
+	@media screen and ($small){
+		@for $i from 1 through 12{
+			@include column($i,"s");
+		}
+	}
+	@media screen and ($medium){
+		@for $i from 1 through 12{
+			@include column($i,"m");
+		}
+	}
+	@media screen and ($large){
+		@for $i from 1 through 12{
+			@include column($i,"l");
+		}
+	}
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+[class*="col-"]{
+	float:left;
+	box-sizing: border-box;
+	padding: 15px;
+}
+
+@include create-columns();

@@ -5,7 +5,6 @@
 // This preloader in appearance, resembles weightlifting bumper plates
 //---------------------------------------------------------------------------/
 
-
 // applied to the inner circle element
 //   given the radius of 2 circles, position the inner circle
 //   in the center of the outer circle
@@ -45,12 +44,10 @@
 	$preloader-end-cap-radius: $preloader-plate-outer-radius / 6;
 
 	.preloader-container{
-		white-space: nowrap;
 		.preloader:not(:first-child){
 			margin-left: -#{$preloader-plate-outer-radius / 1.63};
 		}
 	}
-
 	// rubber part of bumper plate
 	.preloader {
 		@include circle($preloader-plate-outer-radius);
@@ -99,3 +96,15 @@
 			#888 0%, black 80%);
 	}
 }
+
+.preloader-container{
+	white-space: nowrap;
+	text-align: center;
+}
+
+@media screen and ($small){
+	@include preloader($small); }
+@media screen and ($medium){
+	@include preloader($medium); }
+@media screen and ($large){
+	@include preloader($large); }
