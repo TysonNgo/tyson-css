@@ -1,6 +1,15 @@
 // maybe not going to reset
 // @import 'node_modules/reset-css/_reset';
 @import 'node_modules/normalize.css/normalize';
+@import 'components/_base';
 @import 'components/_preloader';
 @import 'components/_variables';
 @import 'components/_grid';
+@import 'components/_buttons';
+
+.center{
+	text-align: center;
+}
+button{
+	display:block;
+}

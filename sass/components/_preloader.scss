@@ -58,42 +58,42 @@
 		&.kg20{ @include preloader-color(#00a); } // blue
 		&.kg15{ @include preloader-color(#f0f000); } // yellow
 		&.kg10{ @include preloader-color(#0e0); } // green
-	}
-	
-	// metal inner disc of bumper plate
-	.preloader::before{
-		@include circle($preloader-plate-inner-radius);
-		@include center-circle-overlay(
-				$preloader-plate-outer-radius,
-				$preloader-plate-inner-radius
-			);
-		content: '';
-		background-color: #888;
-		background-image:
-			linear-gradient(60deg, transparent 48%, rgba(153,153,153,0.5) 50%,
-				rgba(153,153,153,0.5) 50%, transparent 52%),
-			linear-gradient(-60deg, transparent 48%, rgba(153,153,153,0.5) 50%,
-				rgba(153,153,153,0.5) 50%, transparent 52%),
-			linear-gradient(0deg, transparent 0%, #fff 50%,
-				#fff 50%, transparent 100%),
-			linear-gradient(40deg, transparent 40%, #fff 50%,
-				#fff 50%, transparent 60%),
-			linear-gradient(-40deg, transparent 40%, #fff 50%,
-				#fff 50%, transparent 60%)
-	}
 
-	// end-cap
-	.preloader::after{
-		@include circle($preloader-end-cap-radius);
-		@include center-circle-overlay(
-				$preloader-plate-outer-radius,
-				$preloader-end-cap-radius
-			);
-		content: '';
-		background: radial-gradient(
-			#aaa 0%, #888 40%,
-			#555 0%, black 58%,
-			#888 0%, black 80%);
+		// metal inner disc of bumper plate
+		&::before{
+			@include circle($preloader-plate-inner-radius);
+			@include center-circle-overlay(
+					$preloader-plate-outer-radius,
+					$preloader-plate-inner-radius
+				);
+			content: '';
+			background-color: #888;
+			background-image:
+				linear-gradient(60deg, transparent 48%, rgba(153,153,153,0.5) 50%,
+					rgba(153,153,153,0.5) 50%, transparent 52%),
+				linear-gradient(-60deg, transparent 48%, rgba(153,153,153,0.5) 50%,
+					rgba(153,153,153,0.5) 50%, transparent 52%),
+				linear-gradient(0deg, transparent 0%, #fff 50%,
+					#fff 50%, transparent 100%),
+				linear-gradient(40deg, transparent 40%, #fff 50%,
+					#fff 50%, transparent 60%),
+				linear-gradient(-40deg, transparent 40%, #fff 50%,
+					#fff 50%, transparent 60%)
+		}
+
+		// end-cap
+		&::after{
+			@include circle($preloader-end-cap-radius);
+			@include center-circle-overlay(
+					$preloader-plate-outer-radius,
+					$preloader-end-cap-radius
+				);
+			content: '';
+			background: radial-gradient(
+				#aaa 0%, #888 40%,
+				#555 0%, black 58%,
+				#888 0%, black 80%);
+		}
 	}
 }
 

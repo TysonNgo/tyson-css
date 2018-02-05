@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npm run open-files | npm run build -- -w | npm run reload",
-    "build": "node-sass sass/tyson.scss build/tyson.css",
+    "start": "npm run build -- -w --output-style=nested | npm run reload",
+    "build": "node-sass sass/tyson.scss build/tyson.css --output-style=compressed",
     "reload": "reload -b",
-    "open-files": "subl sass/tyson.scss index.html"
+    "open-files": "subl sass/tyson.scss index.html build/tyson.css"
   },
   "author": "",
   "license": "ISC",

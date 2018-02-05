@@ -389,6 +389,9 @@ template {
 [hidden] {
   display: none; }
 
+body {
+  font-family: Helvetica, Arial, Sans-Serif; }
+
 @keyframes spin {
   from {
     transform: rotate(0deg); }
@@ -421,25 +424,25 @@ template {
     .preloader.kg10 {
       background: #0e0;
       background: radial-gradient(#31ff31 0%, #00c000 63%, #008800 0%, #005500 64%, #009c00 0%, #005500 70%); }
-  .preloader::before {
-    border-radius: 50%;
-    width: 45px;
-    height: 45px;
-    position: absolute;
-    top: 22.5px;
-    left: 22.5px;
-    content: '';
-    background-color: #888;
-    background-image: linear-gradient(60deg, transparent 48%, rgba(153, 153, 153, 0.5) 50%, rgba(153, 153, 153, 0.5) 50%, transparent 52%), linear-gradient(-60deg, transparent 48%, rgba(153, 153, 153, 0.5) 50%, rgba(153, 153, 153, 0.5) 50%, transparent 52%), linear-gradient(0deg, transparent 0%, #fff 50%, #fff 50%, transparent 100%), linear-gradient(40deg, transparent 40%, #fff 50%, #fff 50%, transparent 60%), linear-gradient(-40deg, transparent 40%, #fff 50%, #fff 50%, transparent 60%); }
-  .preloader::after {
-    border-radius: 50%;
-    width: 15px;
-    height: 15px;
-    position: absolute;
-    top: 37.5px;
-    left: 37.5px;
-    content: '';
-    background: radial-gradient(#aaa 0%, #888 40%, #555 0%, black 58%, #888 0%, black 80%); } }
+    .preloader::before {
+      border-radius: 50%;
+      width: 45px;
+      height: 45px;
+      position: absolute;
+      top: 22.5px;
+      left: 22.5px;
+      content: '';
+      background-color: #888;
+      background-image: linear-gradient(60deg, transparent 48%, rgba(153, 153, 153, 0.5) 50%, rgba(153, 153, 153, 0.5) 50%, transparent 52%), linear-gradient(-60deg, transparent 48%, rgba(153, 153, 153, 0.5) 50%, rgba(153, 153, 153, 0.5) 50%, transparent 52%), linear-gradient(0deg, transparent 0%, #fff 50%, #fff 50%, transparent 100%), linear-gradient(40deg, transparent 40%, #fff 50%, #fff 50%, transparent 60%), linear-gradient(-40deg, transparent 40%, #fff 50%, #fff 50%, transparent 60%); }
+    .preloader::after {
+      border-radius: 50%;
+      width: 15px;
+      height: 15px;
+      position: absolute;
+      top: 37.5px;
+      left: 37.5px;
+      content: '';
+      background: radial-gradient(#aaa 0%, #888 40%, #555 0%, black 58%, #888 0%, black 80%); } }
 
 @media screen and (min-width: 768px) {
   .preloader-container .preloader:not(:first-child) {
@@ -463,25 +466,25 @@ template {
     .preloader.kg10 {
       background: #0e0;
       background: radial-gradient(#31ff31 0%, #00c000 63%, #008800 0%, #005500 64%, #009c00 0%, #005500 70%); }
-  .preloader::before {
-    border-radius: 50%;
-    width: 62.5px;
-    height: 62.5px;
-    position: absolute;
-    top: 31.25px;
-    left: 31.25px;
-    content: '';
-    background-color: #888;
-    background-image: linear-gradient(60deg, transparent 48%, rgba(153, 153, 153, 0.5) 50%, rgba(153, 153, 153, 0.5) 50%, transparent 52%), linear-gradient(-60deg, transparent 48%, rgba(153, 153, 153, 0.5) 50%, rgba(153, 153, 153, 0.5) 50%, transparent 52%), linear-gradient(0deg, transparent 0%, #fff 50%, #fff 50%, transparent 100%), linear-gradient(40deg, transparent 40%, #fff 50%, #fff 50%, transparent 60%), linear-gradient(-40deg, transparent 40%, #fff 50%, #fff 50%, transparent 60%); }
-  .preloader::after {
-    border-radius: 50%;
-    width: 20.83333px;
-    height: 20.83333px;
-    position: absolute;
-    top: 52.08333px;
-    left: 52.08333px;
-    content: '';
-    background: radial-gradient(#aaa 0%, #888 40%, #555 0%, black 58%, #888 0%, black 80%); } }
+    .preloader::before {
+      border-radius: 50%;
+      width: 62.5px;
+      height: 62.5px;
+      position: absolute;
+      top: 31.25px;
+      left: 31.25px;
+      content: '';
+      background-color: #888;
+      background-image: linear-gradient(60deg, transparent 48%, rgba(153, 153, 153, 0.5) 50%, rgba(153, 153, 153, 0.5) 50%, transparent 52%), linear-gradient(-60deg, transparent 48%, rgba(153, 153, 153, 0.5) 50%, rgba(153, 153, 153, 0.5) 50%, transparent 52%), linear-gradient(0deg, transparent 0%, #fff 50%, #fff 50%, transparent 100%), linear-gradient(40deg, transparent 40%, #fff 50%, #fff 50%, transparent 60%), linear-gradient(-40deg, transparent 40%, #fff 50%, #fff 50%, transparent 60%); }
+    .preloader::after {
+      border-radius: 50%;
+      width: 20.83333px;
+      height: 20.83333px;
+      position: absolute;
+      top: 52.08333px;
+      left: 52.08333px;
+      content: '';
+      background: radial-gradient(#aaa 0%, #888 40%, #555 0%, black 58%, #888 0%, black 80%); } }
 
 @media screen and (min-width: 1024px) {
   .preloader-container .preloader:not(:first-child) {
@@ -505,25 +508,25 @@ template {
     .preloader.kg10 {
       background: #0e0;
       background: radial-gradient(#31ff31 0%, #00c000 63%, #008800 0%, #005500 64%, #009c00 0%, #005500 70%); }
-  .preloader::before {
-    border-radius: 50%;
-    width: 87.5px;
-    height: 87.5px;
-    position: absolute;
-    top: 43.75px;
-    left: 43.75px;
-    content: '';
-    background-color: #888;
-    background-image: linear-gradient(60deg, transparent 48%, rgba(153, 153, 153, 0.5) 50%, rgba(153, 153, 153, 0.5) 50%, transparent 52%), linear-gradient(-60deg, transparent 48%, rgba(153, 153, 153, 0.5) 50%, rgba(153, 153, 153, 0.5) 50%, transparent 52%), linear-gradient(0deg, transparent 0%, #fff 50%, #fff 50%, transparent 100%), linear-gradient(40deg, transparent 40%, #fff 50%, #fff 50%, transparent 60%), linear-gradient(-40deg, transparent 40%, #fff 50%, #fff 50%, transparent 60%); }
-  .preloader::after {
-    border-radius: 50%;
-    width: 29.16667px;
-    height: 29.16667px;
-    position: absolute;
-    top: 72.91667px;
-    left: 72.91667px;
-    content: '';
-    background: radial-gradient(#aaa 0%, #888 40%, #555 0%, black 58%, #888 0%, black 80%); } }
+    .preloader::before {
+      border-radius: 50%;
+      width: 87.5px;
+      height: 87.5px;
+      position: absolute;
+      top: 43.75px;
+      left: 43.75px;
+      content: '';
+      background-color: #888;
+      background-image: linear-gradient(60deg, transparent 48%, rgba(153, 153, 153, 0.5) 50%, rgba(153, 153, 153, 0.5) 50%, transparent 52%), linear-gradient(-60deg, transparent 48%, rgba(153, 153, 153, 0.5) 50%, rgba(153, 153, 153, 0.5) 50%, transparent 52%), linear-gradient(0deg, transparent 0%, #fff 50%, #fff 50%, transparent 100%), linear-gradient(40deg, transparent 40%, #fff 50%, #fff 50%, transparent 60%), linear-gradient(-40deg, transparent 40%, #fff 50%, #fff 50%, transparent 60%); }
+    .preloader::after {
+      border-radius: 50%;
+      width: 29.16667px;
+      height: 29.16667px;
+      position: absolute;
+      top: 72.91667px;
+      left: 72.91667px;
+      content: '';
+      background: radial-gradient(#aaa 0%, #888 40%, #555 0%, black 58%, #888 0%, black 80%); } }
 
 .row::after {
   content: "";
@@ -612,3 +615,73 @@ template {
     width: 91.66667%; }
   .col-12-l {
     width: 100%; } }
+
+button, .button {
+  color: white;
+  background-color: #161616;
+  border-color: black;
+  min-width: 3em;
+  cursor: pointer;
+  padding: 1em;
+  margin: 0.2em;
+  border-radius: 0.35em;
+  border-width: 1px;
+  border-style: solid;
+  transition: background-color 0.2s, color 0.2s linear; }
+  button:hover, .button:hover {
+    background-color: #303030;
+    color: white; }
+  button:active, .button:active {
+    background-color: black; }
+  button:focus, .button:focus {
+    outline: none; }
+  button.red, .button.red {
+    color: white;
+    background-color: red;
+    border-color: #660000; }
+    button.red:hover, .button.red:hover {
+      background-color: #ff3333;
+      color: white; }
+    button.red:active, .button.red:active {
+      background-color: #b30000; }
+    button.red:focus, .button.red:focus {
+      outline: none; }
+  button.blue, .button.blue {
+    color: white;
+    background-color: blue;
+    border-color: #000066; }
+    button.blue:hover, .button.blue:hover {
+      background-color: #3333ff;
+      color: white; }
+    button.blue:active, .button.blue:active {
+      background-color: #0000b3; }
+    button.blue:focus, .button.blue:focus {
+      outline: none; }
+  button.yellow, .button.yellow {
+    color: black;
+    background-color: yellow;
+    border-color: #666600; }
+    button.yellow:hover, .button.yellow:hover {
+      background-color: #ffff33;
+      color: #1a1a1a; }
+    button.yellow:active, .button.yellow:active {
+      background-color: #b3b300; }
+    button.yellow:focus, .button.yellow:focus {
+      outline: none; }
+  button.green, .button.green {
+    color: white;
+    background-color: green;
+    border-color: black; }
+    button.green:hover, .button.green:hover {
+      background-color: #00b300;
+      color: white; }
+    button.green:active, .button.green:active {
+      background-color: #003400; }
+    button.green:focus, .button.green:focus {
+      outline: none; }
+
+.center {
+  text-align: center; }
+
+button {
+  display: block; }

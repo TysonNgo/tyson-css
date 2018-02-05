@@ -1,0 +1,33 @@
+$base-color: #161616;
+
+@mixin button-color($color, $text-color: white){
+	color: $text-color;
+	background-color: $color;
+	border-color: darken($color, 30%);
+	&:hover{
+		background-color: lighten($color, 10%);
+		color: lighten($text-color, 10%);
+	}
+	&:active{
+		background-color: darken($color, 15%);
+	}
+	&:focus{
+		outline: none;
+	}
+}
+
+button, .button{
+	@include button-color($base-color);
+	&.red{ @include button-color(red); }
+	&.blue{ @include button-color(blue); }
+	&.yellow{ @include button-color(yellow, black); }
+	&.green{ @include button-color(green); }
+	min-width: 3em;
+	cursor: pointer;
+	padding: 1em;
+	margin: 0.2em;
+	border-radius: 0.35em;
+	border-width: 1px;
+	border-style: solid;
+	transition: background-color 0.2s, color 0.2s linear;
+}
