@@ -22,6 +22,8 @@ button, .button{
 	&.blue{ @include button-color(blue); }
 	&.yellow{ @include button-color(yellow, black); }
 	&.green{ @include button-color(green); }
+
+	box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
 	min-width: 3em;
 	cursor: pointer;
 	padding: 1em;

@@ -28,18 +28,8 @@
 			$outer1 0%, $outer2 70%); // outer circle 
 }
 
-@mixin preloader($device){
-	$base-radius: 90px;
-
-	@if $device == $small{
-		// base-radius remains the same
-	} @else if $device == $medium{
-		$base-radius: 125px;
-	} @else if $device == $large{
-		$base-radius: 175px;
-	}
-
-	$preloader-plate-outer-radius: $base-radius;
+@mixin preloader(){
+	$preloader-plate-outer-radius: 18vw;
 	$preloader-plate-inner-radius: $preloader-plate-outer-radius / 2;
 	$preloader-end-cap-radius: $preloader-plate-outer-radius / 6;
 
@@ -53,6 +43,7 @@
 		@include circle($preloader-plate-outer-radius);
 		display:inline-block;
 		position:relative;
+		box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
 		animation: spin 1s infinite;
 		&.kg25{ @include preloader-color(red); }
 		&.kg20{ @include preloader-color(#00a); } // blue
@@ -102,9 +93,4 @@
 	text-align: center;
 }
 
-@media screen and ($small){
-	@include preloader($small); }
-@media screen and ($medium){
-	@include preloader($medium); }
-@media screen and ($large){
-	@include preloader($large); }
+@include preloader();

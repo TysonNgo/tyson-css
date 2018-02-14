@@ -389,8 +389,26 @@ template {
 [hidden] {
   display: none; }
 
-body {
+body, html {
   font-family: Helvetica, Arial, Sans-Serif; }
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 10px; }
+
+nav {
+  background: #C8C8C8;
+  background: linear-gradient(to right, #000 0%, #000 13.8%, transparent 13.8%, transparent 15%, #000 15%, #000 17.25%, transparent 17.25%, transparent 18.45%, #000 18.3%, #000 29.3%, transparent 29.3%, transparent 45%, #000 45%, #000 50%, #000 50%, #000 55%, transparent 55%, transparent 70.7%, #000 70.7%, #000 81.55%, transparent 81.55%, transparent 82.75%, #000 82.75%, #000 85%, transparent 85%, transparent 86.2%, #000 86.2%, #000 100%), linear-gradient(#959595 0%, white 30%, white 40%, #C8C8C8 50%, #C8C8C8 70%, gray 90%);
+  border-bottom: 1px solid #494949;
+  height: 3em; }
+  nav .logo {
+    float: left;
+    height: 100%; }
 
 @keyframes spin {
   from {
@@ -402,131 +420,48 @@ body {
   white-space: nowrap;
   text-align: center; }
 
-@media screen and (min-width: 320px) {
-  .preloader-container .preloader:not(:first-child) {
-    margin-left: -55.21472px; }
-  .preloader {
-    border-radius: 50%;
-    width: 90px;
-    height: 90px;
-    display: inline-block;
-    position: relative;
-    animation: spin 1s infinite; }
-    .preloader.kg25 {
-      background: red;
-      background: radial-gradient(#ff4242 0%, #d10000 63%, #990000 0%, #660000 64%, #ad0000 0%, #660000 70%); }
-    .preloader.kg20 {
-      background: #00a;
-      background: radial-gradient(#0000ec 0%, #00007c 63%, #000044 0%, #000011 64%, #000058 0%, #000011 70%); }
-    .preloader.kg15 {
-      background: #f0f000;
-      background: radial-gradient(#ffff33 0%, #c2c200 63%, #8a8a00 0%, #575700 64%, #9e9e00 0%, #575700 70%); }
-    .preloader.kg10 {
-      background: #0e0;
-      background: radial-gradient(#31ff31 0%, #00c000 63%, #008800 0%, #005500 64%, #009c00 0%, #005500 70%); }
-    .preloader::before {
-      border-radius: 50%;
-      width: 45px;
-      height: 45px;
-      position: absolute;
-      top: 22.5px;
-      left: 22.5px;
-      content: '';
-      background-color: #888;
-      background-image: linear-gradient(60deg, transparent 48%, rgba(153, 153, 153, 0.5) 50%, rgba(153, 153, 153, 0.5) 50%, transparent 52%), linear-gradient(-60deg, transparent 48%, rgba(153, 153, 153, 0.5) 50%, rgba(153, 153, 153, 0.5) 50%, transparent 52%), linear-gradient(0deg, transparent 0%, #fff 50%, #fff 50%, transparent 100%), linear-gradient(40deg, transparent 40%, #fff 50%, #fff 50%, transparent 60%), linear-gradient(-40deg, transparent 40%, #fff 50%, #fff 50%, transparent 60%); }
-    .preloader::after {
-      border-radius: 50%;
-      width: 15px;
-      height: 15px;
-      position: absolute;
-      top: 37.5px;
-      left: 37.5px;
-      content: '';
-      background: radial-gradient(#aaa 0%, #888 40%, #555 0%, black 58%, #888 0%, black 80%); } }
+.preloader-container .preloader:not(:first-child) {
+  margin-left: -11.04294vw; }
 
-@media screen and (min-width: 768px) {
-  .preloader-container .preloader:not(:first-child) {
-    margin-left: -76.68712px; }
-  .preloader {
+.preloader {
+  border-radius: 50%;
+  width: 18vw;
+  height: 18vw;
+  display: inline-block;
+  position: relative;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
+  animation: spin 1s infinite; }
+  .preloader.kg25 {
+    background: red;
+    background: radial-gradient(#ff4242 0%, #d10000 63%, #990000 0%, #660000 64%, #ad0000 0%, #660000 70%); }
+  .preloader.kg20 {
+    background: #00a;
+    background: radial-gradient(#0000ec 0%, #00007c 63%, #000044 0%, #000011 64%, #000058 0%, #000011 70%); }
+  .preloader.kg15 {
+    background: #f0f000;
+    background: radial-gradient(#ffff33 0%, #c2c200 63%, #8a8a00 0%, #575700 64%, #9e9e00 0%, #575700 70%); }
+  .preloader.kg10 {
+    background: #0e0;
+    background: radial-gradient(#31ff31 0%, #00c000 63%, #008800 0%, #005500 64%, #009c00 0%, #005500 70%); }
+  .preloader::before {
     border-radius: 50%;
-    width: 125px;
-    height: 125px;
-    display: inline-block;
-    position: relative;
-    animation: spin 1s infinite; }
-    .preloader.kg25 {
-      background: red;
-      background: radial-gradient(#ff4242 0%, #d10000 63%, #990000 0%, #660000 64%, #ad0000 0%, #660000 70%); }
-    .preloader.kg20 {
-      background: #00a;
-      background: radial-gradient(#0000ec 0%, #00007c 63%, #000044 0%, #000011 64%, #000058 0%, #000011 70%); }
-    .preloader.kg15 {
-      background: #f0f000;
-      background: radial-gradient(#ffff33 0%, #c2c200 63%, #8a8a00 0%, #575700 64%, #9e9e00 0%, #575700 70%); }
-    .preloader.kg10 {
-      background: #0e0;
-      background: radial-gradient(#31ff31 0%, #00c000 63%, #008800 0%, #005500 64%, #009c00 0%, #005500 70%); }
-    .preloader::before {
-      border-radius: 50%;
-      width: 62.5px;
-      height: 62.5px;
-      position: absolute;
-      top: 31.25px;
-      left: 31.25px;
-      content: '';
-      background-color: #888;
-      background-image: linear-gradient(60deg, transparent 48%, rgba(153, 153, 153, 0.5) 50%, rgba(153, 153, 153, 0.5) 50%, transparent 52%), linear-gradient(-60deg, transparent 48%, rgba(153, 153, 153, 0.5) 50%, rgba(153, 153, 153, 0.5) 50%, transparent 52%), linear-gradient(0deg, transparent 0%, #fff 50%, #fff 50%, transparent 100%), linear-gradient(40deg, transparent 40%, #fff 50%, #fff 50%, transparent 60%), linear-gradient(-40deg, transparent 40%, #fff 50%, #fff 50%, transparent 60%); }
-    .preloader::after {
-      border-radius: 50%;
-      width: 20.83333px;
-      height: 20.83333px;
-      position: absolute;
-      top: 52.08333px;
-      left: 52.08333px;
-      content: '';
-      background: radial-gradient(#aaa 0%, #888 40%, #555 0%, black 58%, #888 0%, black 80%); } }
-
-@media screen and (min-width: 1024px) {
-  .preloader-container .preloader:not(:first-child) {
-    margin-left: -107.36196px; }
-  .preloader {
+    width: 9vw;
+    height: 9vw;
+    position: absolute;
+    top: 4.5vw;
+    left: 4.5vw;
+    content: '';
+    background-color: #888;
+    background-image: linear-gradient(60deg, transparent 48%, rgba(153, 153, 153, 0.5) 50%, rgba(153, 153, 153, 0.5) 50%, transparent 52%), linear-gradient(-60deg, transparent 48%, rgba(153, 153, 153, 0.5) 50%, rgba(153, 153, 153, 0.5) 50%, transparent 52%), linear-gradient(0deg, transparent 0%, #fff 50%, #fff 50%, transparent 100%), linear-gradient(40deg, transparent 40%, #fff 50%, #fff 50%, transparent 60%), linear-gradient(-40deg, transparent 40%, #fff 50%, #fff 50%, transparent 60%); }
+  .preloader::after {
     border-radius: 50%;
-    width: 175px;
-    height: 175px;
-    display: inline-block;
-    position: relative;
-    animation: spin 1s infinite; }
-    .preloader.kg25 {
-      background: red;
-      background: radial-gradient(#ff4242 0%, #d10000 63%, #990000 0%, #660000 64%, #ad0000 0%, #660000 70%); }
-    .preloader.kg20 {
-      background: #00a;
-      background: radial-gradient(#0000ec 0%, #00007c 63%, #000044 0%, #000011 64%, #000058 0%, #000011 70%); }
-    .preloader.kg15 {
-      background: #f0f000;
-      background: radial-gradient(#ffff33 0%, #c2c200 63%, #8a8a00 0%, #575700 64%, #9e9e00 0%, #575700 70%); }
-    .preloader.kg10 {
-      background: #0e0;
-      background: radial-gradient(#31ff31 0%, #00c000 63%, #008800 0%, #005500 64%, #009c00 0%, #005500 70%); }
-    .preloader::before {
-      border-radius: 50%;
-      width: 87.5px;
-      height: 87.5px;
-      position: absolute;
-      top: 43.75px;
-      left: 43.75px;
-      content: '';
-      background-color: #888;
-      background-image: linear-gradient(60deg, transparent 48%, rgba(153, 153, 153, 0.5) 50%, rgba(153, 153, 153, 0.5) 50%, transparent 52%), linear-gradient(-60deg, transparent 48%, rgba(153, 153, 153, 0.5) 50%, rgba(153, 153, 153, 0.5) 50%, transparent 52%), linear-gradient(0deg, transparent 0%, #fff 50%, #fff 50%, transparent 100%), linear-gradient(40deg, transparent 40%, #fff 50%, #fff 50%, transparent 60%), linear-gradient(-40deg, transparent 40%, #fff 50%, #fff 50%, transparent 60%); }
-    .preloader::after {
-      border-radius: 50%;
-      width: 29.16667px;
-      height: 29.16667px;
-      position: absolute;
-      top: 72.91667px;
-      left: 72.91667px;
-      content: '';
-      background: radial-gradient(#aaa 0%, #888 40%, #555 0%, black 58%, #888 0%, black 80%); } }
+    width: 3vw;
+    height: 3vw;
+    position: absolute;
+    top: 7.5vw;
+    left: 7.5vw;
+    content: '';
+    background: radial-gradient(#aaa 0%, #888 40%, #555 0%, black 58%, #888 0%, black 80%); }
 
 .row::after {
   content: "";
@@ -620,6 +555,7 @@ button, .button {
   color: white;
   background-color: #161616;
   border-color: black;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
   min-width: 3em;
   cursor: pointer;
   padding: 1em;
