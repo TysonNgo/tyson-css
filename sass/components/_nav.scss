@@ -1,0 +1,13 @@
+$base-color: #C8C8C8;
+$no-color: rgba(0,0,0,0);
+$nav-height: 3em;
+
+nav{
+	background: $base-color;
+	border-bottom: 1px solid transparentize(darken($base-color, 30%), 0.5);
+	height: $nav-height;
+	.logo{
+		float:left;
+		height: 100%;
+	}
+}
