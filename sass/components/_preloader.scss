@@ -15,12 +15,12 @@
 }
 
 @mixin preloader-color($color){
-	$inner1: lighten($color, 13%);
-	$inner2: darken($color, 9%);
-	$rim1: darken($color, 20%);
-	$rim2: darken($color, 30%);
-	$outer2: darken($color, 30%);
-	$outer1: darken($color, 16%);
+	$inner1: lighten($color, 9%);
+	$inner2: darken($color, 7%);
+	$rim1: darken($color, 10%);
+	$rim2: darken($color, 15%);
+	$outer2: darken($color, 18%);
+	$outer1: darken($color, 13%);
 	background: $color;
 	background: radial-gradient(
 			$inner1 0%, $inner2 63%, // inner circle
